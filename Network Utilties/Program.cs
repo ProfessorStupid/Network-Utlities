@@ -17,18 +17,23 @@ namespace Network_Utilties
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
 
+            // Run Program
             Application.Run(new NetworkUtlitiesApp());
         }
     }
 
+    // Class for containing the program
     public class NetworkUtlitiesApp : ApplicationContext
     {
+        // Program Icon
         private NotifyIcon trayIcon;
 
         public NetworkUtlitiesApp()
         {
+            // Initialise System Icon
             trayIcon = new NotifyIcon()
             {
+                // Create Menu List
                 Icon = Network_Utilties.Properties.Resources.appIcon,
                 ContextMenu = new ContextMenu(new MenuItem[]
                 {
@@ -40,8 +45,10 @@ namespace Network_Utilties
             };
         }
 
+        // Exit Function - Set as an event handler
         void exit(object sender, EventArgs e)
         {
+            // Make the icon not visible before exiting the program
             trayIcon.Visible = false;
             System.Environment.Exit(0);
         }

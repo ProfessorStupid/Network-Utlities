@@ -32,6 +32,8 @@ namespace Network_Utilties
                 Icon = Network_Utilties.Properties.Resources.appIcon,
                 ContextMenu = new ContextMenu(new MenuItem[]
                 {
+                    new MenuItem("Network Proformance"),
+                    new MenuItem("Options"),
                     new MenuItem("Exit", exit)
                 }),
                 Visible = true

@@ -14,11 +14,32 @@ namespace Network_Utilties
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+        }
+    }
 
-            NotifyIcon ni;
-            ni = new NotifyIcon();
+    public class NetworkUtlitiesApp : ApplicationContext
+    {
+        private NotifyIcon trayIcon;
+
+        public NetworkUtlitiesApp()
+        {
+            trayIcon = new NotifyIcon()
+            {
+                Icon = Network_Utilties.Properties.Resources.appIcon,
+                ContextMenu = new ContextMenu(new MenuItem[]
+                {
+                    new MenuItem("Exit", exit)
+                }),
+                Visible = true
+            };
+        }
+
+        void exit()
+        {
+            trayIcon.Visible = false;
+            System.Environment.Exit(0);
         }
     }
 }

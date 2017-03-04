@@ -36,7 +36,7 @@ namespace Network_Utilties
             };
         }
 
-        void exit()
+        void exit(object sender, EventArgs e)
         {
             trayIcon.Visible = false;
             System.Environment.Exit(0);

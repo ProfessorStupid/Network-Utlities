@@ -4,7 +4,7 @@
 ---
 
 ### Current tasks/features
-| Feature | Development Satus | 
+| Feature | Development Status | 
 | ------  | :---------------: |
 | Internet status checker | Being added |
-| Automatically attempt to restore internet connction | Soon(tm) |
+| Automatically attempt to restore internet connction | After internet status checker |

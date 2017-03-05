@@ -73,4 +73,12 @@ namespace Network_Utilties
 
         }
     }
+
+    public class programOptionsGui : Form
+    {
+        public programOptionsGui()
+        {
+
+        }
+    }
 }

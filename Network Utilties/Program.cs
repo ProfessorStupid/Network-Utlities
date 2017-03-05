@@ -37,12 +37,24 @@ namespace Network_Utilties
                 Icon = Network_Utilties.Properties.Resources.appIcon,
                 ContextMenu = new ContextMenu(new MenuItem[]
                 {
-                    new MenuItem("Network Proformance"),
-                    new MenuItem("Options"),
+                    new MenuItem("Network Performance", networkPeformance),
+                    new MenuItem("Options", programOptions),
                     new MenuItem("Exit", exit)
                 }),
                 Visible = true
             };
+        }
+
+        // Network Performance function
+        void networkPeformance(object sender, EventArgs e)
+        {
+
+        }
+
+        // Program options function
+        void programOptions(object sender, EventArgs e)
+        {
+            
         }
 
         // Exit Function - Set as an event handler

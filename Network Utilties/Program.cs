@@ -48,7 +48,7 @@ namespace Network_Utilties
         // Network Performance function
         void networkPeformance(object sender, EventArgs e)
         {
-
+            Application.Run(new networkPerformanceGui());
         }
 
         // Program options function
@@ -63,6 +63,14 @@ namespace Network_Utilties
             // Make the icon not visible before exiting the program
             trayIcon.Visible = false;
             System.Environment.Exit(0);
+        }
+    }
+
+    public class networkPerformanceGui : Form
+    {
+        public networkPerformanceGui()
+        {
+
         }
     }
 }

@@ -37,8 +37,8 @@ namespace Network_Utilties
                 Icon = Network_Utilties.Properties.Resources.appIcon,
                 ContextMenu = new ContextMenu(new MenuItem[]
                 {
-                    new MenuItem("Network Performance", networkPeformance),
-                    new MenuItem("Options", programOptions),
+                    new MenuItem("Network Performance", networkPeformanceLoader),
+                    new MenuItem("Options", programOptionsLoader),
                     new MenuItem("Exit", exit)
                 }),
                 Visible = true
@@ -46,17 +46,15 @@ namespace Network_Utilties
         }
 
         // Network Performance function
-        void networkPeformance(object sender, EventArgs e)
+        void networkPeformanceLoader(object sender, EventArgs e)
         {
-            networkPerformanceGui gui = new networkPerformanceGui();
-            gui.Show();
+            networkPerformance.launchGUI();
         }
 
         // Program options function
-        void programOptions(object sender, EventArgs e)
+        void programOptionsLoader(object sender, EventArgs e)
         {
-            programOptionsGui gui = new programOptionsGui();
-            gui.Show();
+            programOptions.launchGUI();
         }
 
         // Exit Function - Set as an event handler
@@ -68,21 +66,5 @@ namespace Network_Utilties
         }
     }
 
-    public class networkPerformanceGui : Form
-    {
-        public networkPerformanceGui()
-        {
-            Text = "Test";
-            Size = new System.Drawing.Size(200, 200);
-            CenterToScreen();
-        }
-    }
-
-    public class programOptionsGui : Form
-    {
-        public programOptionsGui()
-        {
-
-        }
-    }
+    
 }

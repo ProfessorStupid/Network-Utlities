@@ -48,13 +48,15 @@ namespace Network_Utilties
         // Network Performance function
         void networkPeformance(object sender, EventArgs e)
         {
-            Application.Run(new networkPerformanceGui());
+            networkPerformanceGui gui = new networkPerformanceGui();
+            gui.Show();
         }
 
         // Program options function
         void programOptions(object sender, EventArgs e)
         {
-            
+            programOptionsGui gui = new programOptionsGui();
+            gui.Show();
         }
 
         // Exit Function - Set as an event handler
@@ -70,7 +72,9 @@ namespace Network_Utilties
     {
         public networkPerformanceGui()
         {
-
+            Text = "Test";
+            Size = new System.Drawing.Size(200, 200);
+            CenterToScreen();
         }
     }
 

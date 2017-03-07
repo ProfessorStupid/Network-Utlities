@@ -48,6 +48,7 @@ namespace Network_Utilties
         // Network Performance function
         void networkPeformanceLoader(object sender, EventArgs e)
         {
+            Console.WriteLine("Network Performance Loader triggered");
             networkPerformance.launchGUI();
         }
 

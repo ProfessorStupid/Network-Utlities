@@ -12,6 +12,7 @@ namespace Network_Utilties
     {
         public static void launchGUI()
         {
+            Console.WriteLine("GUI Launched");
             networkPerformanceGUI gui = new networkPerformanceGUI();
             gui.Show();
         }
@@ -19,8 +20,7 @@ namespace Network_Utilties
         public static string pingAddress(string ip = "8.8.8.8")
         {
             Ping pi = new Ping();
-            return pi.Send(ip).ToString();
-            
+            return pi.Send(ip).ToString();            
         }
     }
 
@@ -28,6 +28,7 @@ namespace Network_Utilties
     {
         public networkPerformanceGUI()
         {
+            Console.WriteLine("GUI Initialsed");
             Text = "Test";
             Size = new System.Drawing.Size(200, 200);
 
@@ -38,6 +39,7 @@ namespace Network_Utilties
             CenterToScreen();
             while (true)
             {
+                Console.WriteLine("Pinging");
                 pingResultLabel.Text = networkPerformance.pingAddress();
             }
         }

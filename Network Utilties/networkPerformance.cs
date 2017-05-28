@@ -36,12 +36,10 @@ namespace Network_Utilties
             pingTitleLabel.Text = "Ping";
 
             Label pingResultLabel = new Label();
+            pingResultLabel.Text = networkPerformance.pingAddress();
             CenterToScreen();
-            while (true)
-            {
-                Console.WriteLine("Pinging");
-                pingResultLabel.Text = networkPerformance.pingAddress();
-            }
         }
+
+
     }
 }

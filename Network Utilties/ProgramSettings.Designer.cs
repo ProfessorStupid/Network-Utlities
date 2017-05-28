@@ -12,7 +12,7 @@ namespace Network_Utilties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
     internal sealed partial class ProgramSettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static ProgramSettings defaultInstance = ((ProgramSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new ProgramSettings())));
@@ -20,6 +20,18 @@ namespace Network_Utilties {
         public static ProgramSettings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8.8.8.8")]
+        public string pingAddress {
+            get {
+                return ((string)(this["pingAddress"]));
+            }
+            set {
+                this["pingAddress"] = value;
             }
         }
     }
